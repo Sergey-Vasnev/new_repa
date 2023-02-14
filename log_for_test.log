@@ -1,0 +1,9 @@
+WARNING  root:Logger.py:10 firefox
+WARNING  root:Logger.py:10 =======================SEPARATOR=================================
+WARNING  root:Logger.py:10 firefox
+WARNING  root:Logger.py:10 2
+WARNING  root:Logger.py:10 __Тест на ввод Логина__
+WARNING  root:Logger.py:10 <selenium.webdriver.firefox.webdriver.WebDriver (session="7131a911-1f3b-47fa-b3fe-e275ef0605ff")>
+WARNING  root:Logger.py:10 Главная страница открыта
+WARNING  root:Logger.py:10 __Тест на ввод неправильного логина и пароля__
+WARNING  root:Logger.py:10 <selenium.webdriver.firefox.webdriver.WebDriver (session="7131a911-1f3b-47fa-b3fe-e275ef0605ff")>
