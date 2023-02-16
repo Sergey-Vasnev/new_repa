@@ -9,8 +9,10 @@ logger=Logg('test_feedback_sending_only_with_name')
 def test_feedback_sending_only_with_name(browser):
 
     logger.make_log('__Test sending feedback only with a name__')
-    #Browser.go_to_site(HomePage.URL)
-    #logger.makeLog(text='Home page opened')
+    home_page=None
+    feedback_page=None
+    send_feedback_page=None
+
     HomePage().click_on_the_feedback_link_button()
     assert FeedbackPage().is_opened()
     logger.make_log(text='Feedback page opened')

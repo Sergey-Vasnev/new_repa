@@ -47,3 +47,7 @@ class Browser(metaclass=Singleton):
             return True
         except NoAlertPresentException:
             return False
+
+    @classmethod
+    def catch_text_from_alert(cls):
+        pass

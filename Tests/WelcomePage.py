@@ -8,8 +8,5 @@ class WelcomePage(BasePage):
     # that can be used to verify that this is the right page
     UNIQUE_LOCATOR = (By.ID, "listAccounts")
 
-    # page address
-    URL = "http://testfire.net/bank/main.jsp"
-
     def __init__(self):
         super().__init__(locator=self.UNIQUE_LOCATOR)

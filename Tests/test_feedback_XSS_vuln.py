@@ -7,6 +7,9 @@ logger=Logg('test_feedback_xss_vuln')
 
 
 def test_feedback_xss_vuln(browser):
+    home_page=None
+    feedback_page=None
+    send_feedback_page=None
 
     logger.make_log('__start of the Test feedback XSS vuln__')
     HomePage().click_on_the_feedback_link_button()

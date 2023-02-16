@@ -48,7 +48,7 @@ The test uses a pattern PageObject, so:
 <li>The class BaseElement is an abstract class which contains methods to interact with elements on the page (searching for elements, clicking on the elements for example). </li>
 <li>The class BasePage is an abstract class which contains methods to interact with the page (checking whether page is open, for example),</li>
 <li>The class Browser contains methods for interaction with the browser (go to site with specifed url, or refresh the page),</li>
-<li>The class Driver is a BrowserFactory which provide different options for different browsers (Firefox or Chrome),</li>
+<li>The class BrowserFactory is a factory, based on a Factory method, which provide different options for different browsers (Firefox or Chrome),</li>
 <li>The conftest.py contains a fixture to launch and quit the browser,</li>
 <li>The Singleton contains Singletone for the Browser.</li>
 </ul>

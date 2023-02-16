@@ -6,7 +6,6 @@ from Framework.Button import Button
 
 class FeedbackPage(BasePage):
 
-    URL = "http://testfire.net/feedback.jsp"
     YOUR_NAME_LOCATOR = (By.NAME, "name")  # creates locator for Your Name field
     YOUR_EMAIL_LOCATOR = (By.NAME, "email_addr")  # creates locator for Your Email Address field
     SUBJECT_LOCATOR = (By.NAME, "subject")  # creates locator for YSubject field

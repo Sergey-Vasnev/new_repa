@@ -9,7 +9,6 @@ class LoginPage(BasePage):
     USERNAME_LOCATOR = (By.NAME, "uid")  # locator for the username field
     PASSWORD_LOCATOR = (By.NAME, "passw")  # locator for the password field
     BUTTON_LOCATOR = (By.NAME, "btnSubmit")  # locator for submit button
-    URL = "http://testfire.net/login.jsp"
 
     def __init__(self):
         super().__init__(locator=self.USERNAME_LOCATOR)
