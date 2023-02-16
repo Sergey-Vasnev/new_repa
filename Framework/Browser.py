@@ -1,7 +1,6 @@
 from selenium.common import NoAlertPresentException
 from Framework.Singleton import Singleton
-from Framework.Driver import Driver
-from Framework.browser_config import BrowserConfig
+from Framework.BrowserFactory import BrowserFactory
 
 
 class Browser(metaclass=Singleton):
@@ -11,8 +10,8 @@ class Browser(metaclass=Singleton):
     #     self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
 
     @classmethod
-    def driver_init(cls,browser_name=BrowserConfig.BROWSER_NAME):
-        cls.driver=Driver.choose_driver(browser_name)
+    def driver_init(cls,browser_name):
+        cls.driver = BrowserFactory.choose_driver(browser_name)
 
     @classmethod
     def get_driver(cls):
@@ -21,7 +20,6 @@ class Browser(metaclass=Singleton):
     @classmethod
     def quit(cls):
         cls.get_driver().quit()
-        # self.driver = None
 
     # function to go to the specified url
     @classmethod
@@ -30,12 +28,17 @@ class Browser(metaclass=Singleton):
     
     # function to return the current url
     @classmethod
-    def current_url(cls):
+    def get_current_url(cls):
         return cls.get_driver().current_url
 
     @classmethod
     def refresh(cls):
         cls.get_driver().refresh()
+
+    @classmethod
+    def switch_to_alert_and_read_its_msg(cls):
+            cls.get_driver().switch_to.alert()
+            return cls.get_driver().alert().getText()
 
     @classmethod
     def catch_alert(cls):

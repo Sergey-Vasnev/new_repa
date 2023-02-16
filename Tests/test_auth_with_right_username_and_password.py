@@ -6,12 +6,15 @@ from Framework.Logger import Logg
 
 logger=Logg('test_auth_with_right_username_and_password')
 
-@pytest.mark.parametrize('login, password',
+
+@pytest.mark.parametrize('login, password, typ',
                         [
-                            ('admin', 'admin'),
+                            ('admin', 'admin', True),
+                            ('Sssnake!', '', True),
+                            ('naruto', 'uzumaki', False)
                         ]
                         )
-def test_auth_with_right_username_and_password(browser,login, password):
+def test_auth_with_right_username_and_password(browser,login, password, typ):
 
     logger.make_log('__Test with right username and password__')
     #Browser.go_to_site(HomePage.URL)
@@ -23,4 +26,7 @@ def test_auth_with_right_username_and_password(browser,login, password):
     logger.make_log(text='Data entered')
     assert WelcomePage().is_opened()
     logger.make_log(text='Welcome page opened')
-    assert WelcomePage().is_opened()
+    if typ == True:
+        assert WelcomePage().is_opened()
+    else:
+        assert WelcomePage.is_closed()
