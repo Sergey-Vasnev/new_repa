@@ -15,9 +15,9 @@ def test_feedback_sending_only_with_name(browser):
 
     home_page.click_on_the_feedback_link_button()
     assert feedback_page.is_opened()
-    logger.make_log(text='Feedback page opened')
-    feedback_page.enter_name('Sergey')
-    logger.make_log(text='Only name entered')
+    logger.make_log(text="Feedback page opened")
+    feedback_page.enter_name("Sergey")
+    logger.make_log(text="Only name entered")
     feedback_page.click_on_the_submit_button()
-    logger.make_log(text='Button pressed, data sent')
+    logger.make_log(text="Button pressed, data sent")
     assert send_feedback_page.is_closed()

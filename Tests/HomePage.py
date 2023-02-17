@@ -8,7 +8,7 @@ class HomePage(BasePage):
 
     # a unique locator
     # that can be used to verify that this is the right page
-    UNIQUE_LOCATOR=r'//a[contains(@href,"personal_savi")]'
+    UNIQUE_LOCATOR=r"//a[contains(@href,'personal_savi')]"
 
     # locators of the links to other pages
     LOGIN_BUTTON_LOCATOR = (By.ID, "LoginLink")
