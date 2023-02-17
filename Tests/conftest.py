@@ -19,6 +19,6 @@ def browser(request):
     BrowserConfig.BROWSER_NAME = browser_name
     Browser().driver_init(browser_name=browser_name)
     Browser.go_to_site(URLs.HOME_PAGE_URL)
-    logger.make_log(text="Home page opened")
+    logger.make_DEBUG(text="Home page opened")
     yield
     Browser.quit()

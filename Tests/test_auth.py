@@ -17,21 +17,21 @@ logger=Logg("test_auth")
                         )
 def test_auth(browser,login, password, typ):
 
-    logger.make_log("__Test auth__")
+    logger.make_DEBUG("__Test auth__")
     home_page=HomePage()
     welcome_page=WelcomePage()
     login_page=LoginPage()
 
     home_page.click_on_the_log_in_link_button()
     assert login_page.is_opened()
-    logger.make_log(text="Authorization page opened")
+    logger.make_DEBUG(text="Authorization page opened")
     login_page.log_in(login, password)
-    logger.make_log(text="Data entered and send")
+    logger.make_DEBUG(text="Data entered and send")
     if typ == True:
         assert welcome_page.is_opened(), "Welcome page was not opened"
-        logger.make_log(text="Welcome page is opened")
+        logger.make_DEBUG(text="Welcome page is opened")
     else:
         if not password:
             assert Browser.catch_alert(), "Notification did not appear"
-            logger.make_log(text="Notification of blank password accepted")
+            logger.make_DEBUG(text="Notification of blank password accepted")
         assert welcome_page.is_closed()
