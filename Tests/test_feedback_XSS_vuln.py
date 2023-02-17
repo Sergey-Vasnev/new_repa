@@ -3,7 +3,7 @@ from Tests.HomePage import HomePage
 from Framework.Browser import Browser
 from Framework.Logger import Logg
 
-logger=Logg('test_feedback_xss_vuln')
+logger=Logg("test_feedback_xss_vuln")
 
 
 def test_feedback_xss_vuln(browser):

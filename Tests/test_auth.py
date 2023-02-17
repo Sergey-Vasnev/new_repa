@@ -8,11 +8,11 @@ from Framework.Browser import Browser
 logger=Logg("test_auth")
 
 
-@pytest.mark.parametrize('login, password, typ',
+@pytest.mark.parametrize("login, password, typ",
                         [
-                            ('admin', 'admin', True),
-                            ('Sssnake!', '', False),
-                            ('naruto', 'uzumaki', False)
+                            ("admin", "admin", True),
+                            ("Sssnake!", "", False),
+                            ("naruto", "uzumaki", False)
                         ]
                         )
 def test_auth(browser,login, password, typ):

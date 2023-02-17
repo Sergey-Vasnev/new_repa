@@ -5,11 +5,11 @@ from Framework.browser_config import BrowserConfig
 from URLs import URLs
 
 
-logger=Logg(f'PrePost_conditions')
+logger=Logg(f"PrePost_conditions")
 
 
 def pytest_addoption(parser):
-    parser.addoption('--browser_name', action='store', default="chrome",
+    parser.addoption("--browser_name", action="store", default="chrome",
                      help="Choose browser: chrome or firefox")
 
 
@@ -19,6 +19,6 @@ def browser(request):
     BrowserConfig.BROWSER_NAME = browser_name
     Browser().driver_init(browser_name=browser_name)
     Browser.go_to_site(URLs.HOME_PAGE_URL)
-    logger.make_log(text='Home page opened')
+    logger.make_log(text="Home page opened")
     yield
     Browser.quit()
