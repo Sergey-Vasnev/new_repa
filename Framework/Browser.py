@@ -5,10 +5,6 @@ from Framework.BrowserFactory import BrowserFactory
 
 class Browser(metaclass=Singleton):
 
-    #driver = None
-    # def __init__(self):
-    #     self.driver = Driver.choose_driver(BrowserConfig.BROWSER_NAME)
-
     @classmethod
     def driver_init(cls,browser_name):
         cls.driver = BrowserFactory.choose_driver(browser_name)

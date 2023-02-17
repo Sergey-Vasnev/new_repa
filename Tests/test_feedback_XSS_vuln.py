@@ -7,16 +7,14 @@ logger=Logg('test_feedback_xss_vuln')
 
 
 def test_feedback_xss_vuln(browser):
-    home_page=None
-    feedback_page=None
-    send_feedback_page=None
-
+    home_page=HomePage()
+    feedback_page=FeedbackPage()
     logger.make_log('__start of the Test feedback XSS vuln__')
-    HomePage().click_on_the_feedback_link_button()
-    assert FeedbackPage().is_opened()
+    home_page.click_on_the_feedback_link_button()
+    assert feedback_page.is_opened()
     logger.make_log(text="Feedback page opened")
-    FeedbackPage().enter_name("<script>alert('attack')</script>")
+    feedback_page.enter_name("<script>alert('attack')</script>")
     logger.make_log(text="JavaScript command entered in the name field")
-    FeedbackPage().click_on_the_submit_button()
+    feedback_page.click_on_the_submit_button()
     logger.make_log(text="Button pressed, data sent")
     assert Browser.switch_to_alert_and_read_its_msg() == "attack"

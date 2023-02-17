@@ -16,7 +16,7 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="function")
 def browser(request):
     browser_name = request.config.getoption("--browser_name")
-    BrowserConfig.BROWSER_NAME=browser_name
+    BrowserConfig.BROWSER_NAME = browser_name
     Browser().driver_init(browser_name=browser_name)
     Browser.go_to_site(URLs.HOME_PAGE_URL)
     logger.make_log(text='Home page opened')
