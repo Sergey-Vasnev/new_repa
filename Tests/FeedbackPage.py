@@ -37,5 +37,5 @@ class FeedbackPage(BasePage):
         TextBox(self.COMMENTS_LOCATOR).enter_data(comments)
         Button(self.BUTTON_LOCATOR).click_the_element()
 
-    def return_page_url(self):
-        return URLs.FEEDBACK_PAGE_URL
+    def get_class_name(self):
+        pass

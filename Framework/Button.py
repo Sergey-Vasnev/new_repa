@@ -3,5 +3,5 @@ from Framework.BaseElement import BaseElement
 
 class Button(BaseElement):  # class for button elements
 
-    def return_locator(self):
+    def get_class_name(self):
         pass

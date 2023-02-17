@@ -42,7 +42,7 @@ class BasePage(ABC):
             return True
 
     @abstractmethod
-    def return_page_url(self):
-        pass
+    def get_class_name(self):
+        return self.__name__
 
 

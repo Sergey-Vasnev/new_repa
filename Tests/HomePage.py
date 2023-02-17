@@ -25,7 +25,7 @@ class HomePage(BasePage):
         button = Button(self.FEEDBACK_BUTTON_LOCATOR)
         button.click_the_element()
 
-    def return_page_url(self):
-        return URLs.HOME_PAGE_URL
+    def get_class_name(self):
+        pass
 
 

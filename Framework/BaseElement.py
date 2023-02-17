@@ -86,6 +86,6 @@ class BaseElement(ABC):
         element.click()
 
     @abstractmethod
-    def return_locator(self):
-        pass
+    def get_class_name(self):
+        return self.__name__
 

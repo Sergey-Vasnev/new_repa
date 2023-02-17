@@ -8,5 +8,5 @@ class TextBox(BaseElement):  # class for textbox elements
         element.click()
         element.send_keys(data)
 
-    def return_locator(self):
+    def get_class_name(self):
         pass

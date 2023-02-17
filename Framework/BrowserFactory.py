@@ -1,9 +1,7 @@
-import pytest
 from selenium import webdriver
-from Framework.Singleton import Singleton
 
 
-class BrowserFactory(metaclass=Singleton):
+class BrowserFactory():
 
     @staticmethod
     def choose_driver(browser_name):

@@ -12,5 +12,5 @@ class WelcomePage(BasePage):
     def __init__(self):
         super().__init__(locator=self.UNIQUE_LOCATOR)
 
-    def return_page_url(self):
-        return URLs.WELCOME_PAGE_URL
+    def get_class_name(self):
+        pass

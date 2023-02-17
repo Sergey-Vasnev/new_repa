@@ -34,8 +34,8 @@ class LoginPage(BasePage):
         TextBox(self.PASSWORD_LOCATOR).enter_data(password)
         Button(self.BUTTON_LOCATOR).click_the_element()
 
-    def return_page_url(self):
-        return URLs.LOGIN_PAGE_URL
+    def get_class_name(self):
+        pass
 
 
 

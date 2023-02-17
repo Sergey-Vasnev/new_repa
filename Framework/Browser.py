@@ -32,7 +32,7 @@ class Browser(metaclass=Singleton):
         cls.get_driver().refresh()
 
     @classmethod
-    def switch_to_alert_and_read_its_msg(cls):
+    def get_text_from_alert(cls):
             cls.get_driver().switch_to.alert()
             return cls.get_driver().alert().getText()
 
