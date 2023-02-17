@@ -40,7 +40,7 @@ class BaseElement(ABC):
         '''
         self.locator=locator
 
-    def find_element(self,time=1):
+    def wait_for_element(self, time=1):
         '''
         Attributes
         ----------
@@ -53,7 +53,7 @@ class BaseElement(ABC):
         '''
         return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_element_located(self.locator))
 
-    def find_elements(self,time=1):
+    def wait_for_elements(self, time=1):
         '''
         Attributes
         ----------
@@ -70,19 +70,19 @@ class BaseElement(ABC):
         '''
         Return True if element is on the page.
         '''
-        return len(self.find_elements()) > 0
+        return len(self.wait_for_elements()) > 0
 
     def element_is_not_present(self):
         '''
         Return True if TimeoutException was raised -> element is not on the page.
         '''
         try:
-            self.find_elements()
+            self.wait_for_elements()
         except TimeoutException:
             return True
 
     def click_the_element(self):
-        element=self.find_element()
+        element=self.wait_for_element()
         element.click()
 
     @abstractmethod

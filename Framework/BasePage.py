@@ -31,15 +31,13 @@ class BasePage(ABC):
         '''
         Checks if the page is opened.
         '''
-        if BaseElement(self.Locator).element_is_present():
-            return True
+        return BaseElement(self.Locator).element_is_present()
 
     def is_closed(self):
         '''
         Checks if the page is closed.
         '''
-        if BaseElement(self.Locator).element_is_not_present():
-            return True
+        return BaseElement(self.Locator).element_is_not_present()
 
     @abstractmethod
     def get_class_name(self):

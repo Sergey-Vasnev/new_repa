@@ -7,3 +7,6 @@ class Logg:
 
     def make_log(self, text):
         self.logger.debug(msg=text)
+
+    def make_log_INFO(self):
+        pass
