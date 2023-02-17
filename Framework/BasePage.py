@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from Framework.BaseElement import BaseElement
 
 
@@ -40,5 +40,9 @@ class BasePage(ABC):
         '''
         if BaseElement(self.Locator).element_is_not_present():
             return True
+
+    @abstractmethod
+    def return_page_url(self):
+        pass
 
 

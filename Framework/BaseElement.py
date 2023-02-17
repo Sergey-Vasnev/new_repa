@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -85,4 +85,7 @@ class BaseElement(ABC):
         element=self.find_element()
         element.click()
 
+    @abstractmethod
+    def return_locator(self):
+        pass
 

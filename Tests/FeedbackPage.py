@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
 from Framework.TextBox import TextBox
 from Framework.Button import Button
-
+from URLs import URLs
 
 class FeedbackPage(BasePage):
 
@@ -36,3 +36,6 @@ class FeedbackPage(BasePage):
         TextBox(self.SUBJECT_LOCATOR).enter_data(subject)
         TextBox(self.COMMENTS_LOCATOR).enter_data(comments)
         Button(self.BUTTON_LOCATOR).click_the_element()
+
+    def return_page_url(self):
+        return URLs.FEEDBACK_PAGE_URL

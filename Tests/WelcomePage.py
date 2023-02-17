@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
+from URLs import URLs
 
 
 class WelcomePage(BasePage):
@@ -10,3 +11,6 @@ class WelcomePage(BasePage):
 
     def __init__(self):
         super().__init__(locator=self.UNIQUE_LOCATOR)
+
+    def return_page_url(self):
+        return URLs.WELCOME_PAGE_URL
