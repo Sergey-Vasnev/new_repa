@@ -51,7 +51,7 @@ class BaseElement(ABC):
         ----------
         Returns an element.
         '''
-        return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_element_located(self.locator))
+        WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_element_located(self.locator))
 
     def wait_for_elements(self, time=1):
         '''
@@ -64,7 +64,7 @@ class BaseElement(ABC):
         ----------
         Returns an array.
         '''
-        return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_all_elements_located(self.locator))
+        WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_all_elements_located(self.locator))
 
 
     def element_is_present(self):
