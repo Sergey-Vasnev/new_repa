@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
+from Framework.Label import Label
 from URLs import URLs
 
 
@@ -10,5 +11,8 @@ class SendFeedbackPage(BasePage):
     def __init__(self):
         super().__init__(locator=self.UNIQUE_LOCATOR)
 
-    def get_class_name(self):
-        pass
+    def is_opened(self):
+        Label(self.UNIQUE_LOCATOR).element_is_present()
+
+    def is_closed(self):
+       Label(self.UNIQUE_LOCATOR).element_is_not_present()

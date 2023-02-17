@@ -37,5 +37,8 @@ class FeedbackPage(BasePage):
         TextBox(self.COMMENTS_LOCATOR).enter_data(comments)
         Button(self.BUTTON_LOCATOR).click_the_element()
 
-    def get_class_name(self):
-        pass
+    def is_opened(self):
+        TextBox(self.YOUR_NAME_LOCATOR).element_is_present()
+
+    def is_closed(self):
+        TextBox(self.YOUR_NAME_LOCATOR).element_is_not_present()

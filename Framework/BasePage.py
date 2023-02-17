@@ -27,20 +27,21 @@ class BasePage(ABC):
         '''
         self.Locator = locator
 
+    @abstractmethod
     def is_opened(self):
         '''
         Checks if the page is opened.
         '''
-        return BaseElement(self.Locator).element_is_present()
+        # return BaseElement(self.Locator).element_is_present()
+        pass
 
+    @abstractmethod
     def is_closed(self):
         '''
         Checks if the page is closed.
         '''
-        return BaseElement(self.Locator).element_is_not_present()
+        # return BaseElement(self.Locator).element_is_not_present()
+        pass
 
-    @abstractmethod
-    def get_class_name(self):
-        return self.__name__
 
 

@@ -34,8 +34,11 @@ class LoginPage(BasePage):
         TextBox(self.PASSWORD_LOCATOR).enter_data(password)
         Button(self.BUTTON_LOCATOR).click_the_element()
 
-    def get_class_name(self):
-        pass
+    def is_opened(self):
+        TextBox(self.USERNAME_LOCATOR).element_is_present()
+
+    def is_closed(self):
+        TextBox(self.USERNAME_LOCATOR).element_is_not_present()
 
 
 

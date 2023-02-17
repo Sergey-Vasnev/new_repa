@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
 from Framework.Button import Button
+from Framework.Label import Label
 from URLs import URLs
 
 
@@ -25,7 +26,10 @@ class HomePage(BasePage):
         button = Button(self.FEEDBACK_BUTTON_LOCATOR)
         button.click_the_element()
 
-    def get_class_name(self):
-        pass
+    def is_opened(self):
+        Label(self.UNIQUE_LOCATOR).element_is_present()
+
+    def is_closed(self):
+        Label(self.UNIQUE_LOCATOR).element_is_not_present()
 
 
