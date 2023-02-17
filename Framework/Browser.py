@@ -7,11 +7,11 @@ class Browser(metaclass=Singleton):
 
     @classmethod
     def driver_init(cls,browser_name):
-        cls.driver = BrowserFactory.choose_driver(browser_name)
+        cls._driver = BrowserFactory.choose_driver(browser_name)
 
     @classmethod
     def get_driver(cls):
-        return cls().driver
+        return cls()._driver
 
     @classmethod
     def quit(cls):
@@ -28,7 +28,7 @@ class Browser(metaclass=Singleton):
         return cls.get_driver().current_url
 
     @classmethod
-    def refresh(cls):
+    def refresh_the_page(cls):
         cls.get_driver().refresh()
 
     @classmethod
@@ -43,7 +43,3 @@ class Browser(metaclass=Singleton):
             return True
         except NoAlertPresentException:
             return False
-
-    @classmethod
-    def catch_text_from_alert(cls):
-        pass
