@@ -36,12 +36,12 @@ class Browser(metaclass=Singleton):
         try:
             return cls.get_driver().switch_to.alert.text
         except NoAlertPresentException:
-            return None
+            return False
 
     @classmethod
     def alert_presence(cls):
         try:
-            cls.get_driver().switch_to.alert
+            return cls.get_driver().switch_to.alert
         except NoAlertPresentException:
             return False
 

@@ -1,7 +1,7 @@
 import pytest
-from Tests.HomePage import HomePage
-from Tests.LoginPage import LoginPage
-from Tests.WelcomePage import WelcomePage
+from PSI_IB.pages.HomePage import HomePage
+from PSI_IB.pages.LoginPage import LoginPage
+from PSI_IB.pages.WelcomePage import WelcomePage
 from Framework.Logger import Logg
 from Framework.Browser import Browser
 
