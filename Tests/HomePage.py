@@ -27,9 +27,9 @@ class HomePage(BasePage):
         button.click_the_element()
 
     def is_opened(self):
-        Label(self.UNIQUE_LOCATOR).element_is_present()
+        return Label(self.UNIQUE_LOCATOR).element_is_present()
 
     def is_closed(self):
-        Label(self.UNIQUE_LOCATOR).element_is_not_present()
+        return Label(self.UNIQUE_LOCATOR).element_is_not_present()
 
 

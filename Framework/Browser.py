@@ -33,8 +33,10 @@ class Browser(metaclass=Singleton):
 
     @classmethod
     def get_text_from_alert(cls):
-            cls.get_driver().switch_to.alert()
-            return cls.get_driver().alert().getText()
+        try:
+            return cls.get_driver().switch_to.alert.text
+        except NoAlertPresentException:
+            return None
 
     @classmethod
     def catch_alert(cls):

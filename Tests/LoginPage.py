@@ -35,10 +35,10 @@ class LoginPage(BasePage):
         Button(self.BUTTON_LOCATOR).click_the_element()
 
     def is_opened(self):
-        TextBox(self.USERNAME_LOCATOR).element_is_present()
+        return TextBox(self.USERNAME_LOCATOR).element_is_present()
 
     def is_closed(self):
-        TextBox(self.USERNAME_LOCATOR).element_is_not_present()
+        return TextBox(self.USERNAME_LOCATOR).element_is_not_present()
 
 
 

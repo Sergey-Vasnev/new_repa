@@ -12,7 +12,7 @@ class SendFeedbackPage(BasePage):
         super().__init__(locator=self.UNIQUE_LOCATOR)
 
     def is_opened(self):
-        Label(self.UNIQUE_LOCATOR).element_is_present()
+        return Label(self.UNIQUE_LOCATOR).element_is_present()
 
     def is_closed(self):
-       Label(self.UNIQUE_LOCATOR).element_is_not_present()
+       return Label(self.UNIQUE_LOCATOR).element_is_not_present()

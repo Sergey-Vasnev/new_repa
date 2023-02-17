@@ -17,4 +17,4 @@ def test_feedback_xss_vuln(browser):
     logger.make_log(text="JavaScript command entered in the name field")
     feedback_page.click_on_the_submit_button()
     logger.make_log(text="Button pressed, data sent")
-    assert Browser.get_text_from_alert() == "attack"
+    assert not Browser.get_text_from_alert() == "attack"

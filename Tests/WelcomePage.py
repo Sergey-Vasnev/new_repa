@@ -14,7 +14,7 @@ class WelcomePage(BasePage):
         super().__init__(locator=self.UNIQUE_LOCATOR)
 
     def is_opened(self):
-        List(self.UNIQUE_LOCATOR).element_is_present()
+        return List(self.UNIQUE_LOCATOR).element_is_present()
 
     def is_closed(self):
-        List(self.UNIQUE_LOCATOR).element_is_not_present()
+        return List(self.UNIQUE_LOCATOR).element_is_not_present()

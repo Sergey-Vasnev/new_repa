@@ -2,4 +2,5 @@ from Framework.BaseElement import BaseElement
 
 
 class Label(BaseElement):
-    pass
+    def get_class_name(self):
+        pass
