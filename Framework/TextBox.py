@@ -7,3 +7,6 @@ class TextBox(BaseElement):  # class for textbox elements
         element = self.find_element()
         element.click()
         element.send_keys(data)
+
+    def return_locator(self):
+        pass

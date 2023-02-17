@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
 from Framework.Button import Button
+from URLs import URLs
 
 
 class HomePage(BasePage):
@@ -23,5 +24,8 @@ class HomePage(BasePage):
     def click_on_the_feedback_link_button(self):
         button = Button(self.FEEDBACK_BUTTON_LOCATOR)
         button.click_the_element()
+
+    def return_page_url(self):
+        return URLs.HOME_PAGE_URL
 
 

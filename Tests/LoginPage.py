@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from Framework.BasePage import BasePage
 from Framework.TextBox import TextBox
 from Framework.Button import Button
+from URLs import URLs
 
 
 class LoginPage(BasePage):
@@ -32,6 +33,9 @@ class LoginPage(BasePage):
         TextBox(self.USERNAME_LOCATOR).enter_data(login)
         TextBox(self.PASSWORD_LOCATOR).enter_data(password)
         Button(self.BUTTON_LOCATOR).click_the_element()
+
+    def return_page_url(self):
+        return URLs.LOGIN_PAGE_URL
 
 
 
