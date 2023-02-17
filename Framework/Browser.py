@@ -39,6 +39,13 @@ class Browser(metaclass=Singleton):
             return None
 
     @classmethod
+    def alert_presence(cls):
+        try:
+            cls.get_driver().switch_to.alert
+        except NoAlertPresentException:
+            return False
+
+    @classmethod
     def catch_alert(cls):
         try:
             cls.get_driver().switch_to.alert.accept()

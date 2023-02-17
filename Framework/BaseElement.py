@@ -66,6 +66,7 @@ class BaseElement(ABC):
         '''
         return WebDriverWait(Browser.get_driver(),time).until(EC.presence_of_all_elements_located(self.locator))
 
+
     def element_is_present(self):
         '''
         Return True if element is on the page.
